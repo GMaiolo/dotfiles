@@ -1,7 +1,16 @@
 #core
 alias cls="xdotool key ctrl+shift+k"
+alias cd..="cd .."
+alias mkdir="mkdir -p"
+mcd () {
+    mkdir -p $1
+    cd $1
+}
 open() {
     dolphin "$1" &
+}
+sym() {
+    ln -s "$1" "$2"
 }
 
 #to make possibly destructive commands interactive
@@ -11,6 +20,7 @@ alias cp="cp -i"
 
 #git
 alias g="git"
+alias gd="git diff"
 alias gs="git status"
 alias gb="git branch"
 alias gbd="git branch -D"
