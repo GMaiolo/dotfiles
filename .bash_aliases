@@ -4,6 +4,11 @@ open() {
     dolphin "$1" &
 }
 
+#to make possibly destructive commands interactive
+alias rm="rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
+
 #git
 alias g="git"
 alias gs="git status"
