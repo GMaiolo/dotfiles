@@ -36,4 +36,14 @@ browse() {
 }
 
 #others
-alias spec="code ~/development/spec && ~/development/spec"
+spec() {
+    calendar=calendar.google.com
+    mail=mail.google.com
+    globantProfile="Profile 1"
+    code ~/development/spec
+    nohup chromium-browser $calendar $mail --profile-directory=$globantProfile &
+    nohup slack &
+    sleep 10s
+    cd ~/development/spec
+    xdotool key ctrl+shift+k
+}
