@@ -46,4 +46,6 @@ spec() {
     sleep 10s
     cd ~/development/spec
     xdotool key ctrl+shift+k
+    git pull
+    gulp serve
 }
