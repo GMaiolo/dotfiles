@@ -12,6 +12,9 @@ open() {
 sym() {
     ln -s "$1" "$2"
 }
+shutdownNow() {
+    shutdown -t 0
+}
 
 #to make possibly destructive commands interactive
 alias rm="rm -i"
